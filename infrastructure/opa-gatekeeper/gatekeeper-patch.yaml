@@ -15,3 +15,5 @@ spec:
         - --exempt-namespace=gatekeeper-system
         - --exempt-namespace=kube-system
         - --exempt-namespace=kube-public
+        - --exempt-namespace=podinfo
+        - --exempt-namespace=redis
