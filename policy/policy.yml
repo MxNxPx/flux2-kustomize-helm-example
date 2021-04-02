@@ -5,7 +5,7 @@ metadata:
   namespace: gatekeeper-system
 spec:
   interval: 1m
-  path: "./infrastructure/opa/opa-gatekeeper"
+  path: "../infrastructure/opa/opa-gatekeeper"
   prune: true
   sourceRef:
     kind: GitRepository
