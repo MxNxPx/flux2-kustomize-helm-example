@@ -14,9 +14,13 @@ spec:
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: gatekeeper-controller-manager
-      namespace: gatekeeper-system
-    - apiVersion: apps/v1
-      kind: Deployment
       name: nginx-ingress-controller
       namespace: nginx
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: gatekeeper-controller-manager
+      namespace: gatekeeper-system
+    - apiVersion: templates.gatekeeper.sh/v1beta1
+      kind: ConstraintTemplate
+      name: k8srequiredlabels
+      namespace: gatekeeper-system
