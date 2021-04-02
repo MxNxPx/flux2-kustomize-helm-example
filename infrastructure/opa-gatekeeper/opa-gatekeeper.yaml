@@ -15,18 +15,3 @@ spec:
       kind: Deployment
       name: gatekeeper-controller-manager
       namespace: gatekeeper-system
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-kind: Kustomization
-metadata:
-  name: opa-policies
-  namespace: gatekeeper-system
-spec:
-  dependsOn:
-    - name: opa-gatekeeper
-  interval: 5m
-  path: "./infrastructure/opa/opa-policies"
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
