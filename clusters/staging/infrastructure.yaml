@@ -11,3 +11,12 @@ spec:
   path: ./infrastructure
   prune: true
   validation: client
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: gatekeeper-controller-manager
+      namespace: gatekeeper-system
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: nginx-ingress-controller
+      namespace: nginx

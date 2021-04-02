@@ -5,10 +5,11 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: opa-gatekeeper
+    - name: infrastructure
   interval: 5m
   path: "./policy"
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
+  validation: client
