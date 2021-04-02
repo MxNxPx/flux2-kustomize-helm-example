@@ -20,7 +20,3 @@ spec:
       kind: Deployment
       name: gatekeeper-controller-manager
       namespace: gatekeeper-system
-    - apiVersion: templates.gatekeeper.sh/v1beta1
-      kind: ConstraintTemplate
-      name: k8srequiredlabels
-      namespace: gatekeeper-system
