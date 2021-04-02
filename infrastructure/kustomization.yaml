@@ -4,5 +4,5 @@ resources:
   - sources
   - nginx
   - redis
-  - opa-gatekeeper
+  - opa
   - kube-state-metrics
