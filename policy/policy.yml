@@ -7,7 +7,7 @@ spec:
   dependsOn:
     - name: opa-gatekeeper
   interval: 5m
-  path: "./policy"
+  path: "./policy/opa-policies"
   prune: true
   sourceRef:
     kind: GitRepository
