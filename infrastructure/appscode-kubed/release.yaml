@@ -20,4 +20,3 @@ spec:
   values:
     criticalAddon: true
     enableAnalytics: false
-  
