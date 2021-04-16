@@ -6,7 +6,7 @@ spec:
   releaseName: kubed
   chart:
     spec:
-      chart: appscode/kubed
+      chart: kubed
       sourceRef:
         kind: HelmRepository
         name: appscode
