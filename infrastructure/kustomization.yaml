@@ -7,3 +7,4 @@ resources:
   - opa-gatekeeper
   - kube-state-metrics
   - appscode-kubed
+  - monitoring
