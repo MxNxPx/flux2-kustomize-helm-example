@@ -13,7 +13,7 @@ spec:
     kind: GitRepository
     name: flux-system
   prune: true
-  validation: client
+  validation: server
   healthChecks:
     - apiVersion: templates.gatekeeper.sh/v1beta1
       kind: ConstraintTemplate
@@ -34,3 +34,4 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  validation: server
