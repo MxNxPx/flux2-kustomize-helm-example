@@ -8,7 +8,7 @@ spec:
     - name: infrastructure
   interval: 1m
   validation: none
-  path: "./policy/opa-templates"
+  path: "./clusters/_shared_/policy-base/opa-templates"
   prune: true
   sourceRef:
     kind: GitRepository
@@ -30,7 +30,7 @@ spec:
     - name: opa-templates
   interval: 1m
   validation: none
-  path: "./policy/opa-constraints"
+  path: "./clusters/_shared/policy-base/opa-constraints"
   prune: true
   sourceRef:
     kind: GitRepository
