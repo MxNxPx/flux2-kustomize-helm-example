@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: infrastructure
+    - name: opa-gatekeeper
   interval: 1m
   validation: none
   path: "./clusters/_shared_/policy-base/opa-templates"
