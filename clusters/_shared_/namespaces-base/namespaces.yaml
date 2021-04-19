@@ -30,6 +30,13 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
+  name: flux-system
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-gitops"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
   name: nginx
   labels:
     admission.gatekeeper.sh/ignore: "cluster-ingress"
