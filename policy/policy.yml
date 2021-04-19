@@ -7,13 +7,13 @@ spec:
   dependsOn:
     - name: infrastructure
   interval: 1m
+  validation: none
   path: "./policy/opa-templates"
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
   prune: true
-  #validation: none
   healthChecks:
     - apiVersion: templates.gatekeeper.sh/v1beta1
       kind: ConstraintTemplate
@@ -29,9 +29,9 @@ spec:
   dependsOn:
     - name: opa-templates
   interval: 1m
+  validation: none
   path: "./policy/opa-constraints"
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-  #validation: none
