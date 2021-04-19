@@ -19,3 +19,4 @@ spec:
         - --exempt-namespace=podinfo
         - --exempt-namespace=redis
         - --exempt-namespace=default
+        - --exempt-namespace=staging-test
