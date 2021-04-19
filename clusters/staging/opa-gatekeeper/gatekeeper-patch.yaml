@@ -14,6 +14,8 @@ spec:
         - --operation=webhook
         - --exempt-namespace=gatekeeper-system
         - --exempt-namespace=kube-system
+        - --exempt-namespace=kube-node-lease
         - --exempt-namespace=kube-public
         - --exempt-namespace=podinfo
         - --exempt-namespace=redis
+        - --exempt-namespace=default
