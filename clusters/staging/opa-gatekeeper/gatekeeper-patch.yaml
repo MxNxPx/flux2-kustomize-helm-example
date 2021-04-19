@@ -13,6 +13,8 @@ spec:
         - --logtostderr
         - --operation=webhook
         - --exempt-namespace=gatekeeper-system
+        - --exempt-namespace=flux-system
+        - --exempt-namespace=staging-test
         - --exempt-namespace=kube-system
         - --exempt-namespace=kube-node-lease
         - --exempt-namespace=kube-public
