@@ -14,11 +14,11 @@ spec:
     kind: GitRepository
     name: flux-system
   prune: true
-  healthChecks:
-    - apiVersion: constraints.gatekeeper.sh/v1beta1
-      kind: ConstraintTemplate
-      name: k8srequiredlabels
-      namespace: gatekeeper-system
+#  healthChecks:
+#    - apiVersion: constraints.gatekeeper.sh/v1beta1
+#      kind: ConstraintTemplate
+#      name: k8srequiredlabels
+#      namespace: gatekeeper-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
