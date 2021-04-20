@@ -1,22 +1,21 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
-  name: apps
+  name: opa-gatekeeper
   namespace: flux-system
 spec:
-  interval: 0h5m0s
   dependsOn:
     - name: sources
     - name: namespaces
-    - name: redis
+  interval: 0h5m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/production
+  path: ./clusters/staging/opa-gatekeeper
   prune: true
-  validation: client
+  validation: none
   healthChecks:
-    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
-      kind: HelmRelease
-      name: podinfo
-      namespace: podinfo
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: gatekeeper-controller-manager
+      namespace: gatekeeper-system

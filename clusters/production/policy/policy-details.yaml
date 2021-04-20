@@ -1,0 +1,37 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: opa-policy-templates
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: opa-gatekeeper
+  interval: 1m
+  validation: none
+  path: "./clusters/_shared_/policy-base/opa-policy-templates"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  prune: true
+#  healthChecks:
+#    - apiVersion: constraints.gatekeeper.sh/v1beta1
+#      kind: ConstraintTemplate
+#      name: k8srequiredlabels
+#      namespace: gatekeeper-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: opa-policy-constraints
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: opa-policy-templates
+  interval: 1m
+  validation: none
+  path: "./clusters/_shared_/policy-base/opa-policy-constraints"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
