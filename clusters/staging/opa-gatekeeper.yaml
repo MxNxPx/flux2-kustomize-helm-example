@@ -11,7 +11,8 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./clusters/staging/opa-gatekeeper
+  path: ./clusters/_shared_/opa-gatekeeper-base
+  patchesStrategicMerge: ./clusters/staging/opa-gatekeeper
   prune: true
   validation: none
   healthChecks:
