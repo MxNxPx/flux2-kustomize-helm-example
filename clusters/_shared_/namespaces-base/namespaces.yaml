@@ -41,3 +41,10 @@ metadata:
   labels:
     admission.gatekeeper.sh/ignore: "cluster-cache"
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: podinfo
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-apps"
+---
