@@ -34,3 +34,10 @@ metadata:
   labels:
     admission.gatekeeper.sh/ignore: "cluster-ingress"
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: redis
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-cache"
+---
