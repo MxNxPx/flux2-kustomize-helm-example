@@ -21,4 +21,5 @@ spec:
     postInstall:
       labelNamespace:
         enabled: false
-  postRenderers: postRender.sh
+  postRenderers: 
+    patchesStrategicMerge: gatekeeper-patch.yaml
