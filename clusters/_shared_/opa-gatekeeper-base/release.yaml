@@ -21,4 +21,4 @@ spec:
     postInstall:
       labelNamespace:
         enabled: false
-  postRenderers: [ "postRender.sh" ]
+  postRenderers: postRender.sh
