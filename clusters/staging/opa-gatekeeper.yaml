@@ -12,7 +12,7 @@ spec:
     name: flux-system
   path: ./clusters/staging/opa-gatekeeper
   prune: true
-  validation: client
+  validation: none
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
