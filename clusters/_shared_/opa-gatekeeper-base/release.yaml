@@ -21,7 +21,7 @@ spec:
     postInstall:
       labelNamespace:
         enabled: false
-  postRenderers: 
-    - kustomize:
-        patchesStrategicMerge:
-          - gatekeeper-patch.yaml
+#  postRenderers: 
+#    - kustomize:
+#        patchesStrategicMerge:
+#          - ./clusters/_shared_/opa-gatekeeper-base/gatekeeper-patch.yaml
