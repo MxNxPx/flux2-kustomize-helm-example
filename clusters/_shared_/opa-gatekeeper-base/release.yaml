@@ -23,4 +23,5 @@ spec:
         enabled: false
   postRenderers: 
     - kustomize:
-        patchesStrategicMerge: gatekeeper-patch.yaml
+        patchesStrategicMerge:
+          - gatekeeper-patch.yaml
