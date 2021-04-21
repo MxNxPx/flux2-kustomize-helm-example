@@ -17,3 +17,7 @@ spec:
     remediation:
       retries: 3
   # Default values
+  values:
+    postInstall:
+      labelNamespace:
+        enabled: false
