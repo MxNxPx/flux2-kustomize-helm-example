@@ -6,3 +6,4 @@ resources:
   - podinfo.yaml
   - kube-state-metrics.yaml
   - appscode.yaml
+  - gatekeeper.yaml
