@@ -12,7 +12,8 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./clusters/_shared_/opa-gatekeeper-base
-  patchesStrategicMerge: ./clusters/staging/opa-gatekeeper/gatekeeper-patch.yaml
+  patchesStrategicMerge:
+    - ./clusters/staging/opa-gatekeeper/gatekeeper-patch.yaml
   prune: true
   validation: none
   healthChecks:
