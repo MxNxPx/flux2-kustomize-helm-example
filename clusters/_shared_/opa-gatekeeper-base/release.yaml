@@ -22,5 +22,4 @@ spec:
       labelNamespace:
         enabled: false
   postRenderers: 
-    - patchesStrategicMerge: 
-      - gatekeeper-patch.yaml
+    - patchesStrategicMerge: gatekeeper-patch.yaml
