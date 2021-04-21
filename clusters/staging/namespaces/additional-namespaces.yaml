@@ -3,6 +3,4 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: staging-test
-  labels:
-    admission.gatekeeper.sh/ignore: "cluster-test"
 ---
