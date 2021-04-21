@@ -24,4 +24,4 @@ spec:
   postRenderers: 
     - kustomize:
         patchesStrategicMerge:
-          - ./clusters/_shared_/opa-gatekeeper-base/gatekeeper-patch.yaml
+          - "./clusters/_shared_/opa-gatekeeper-base/gatekeeper-patch.yaml"
