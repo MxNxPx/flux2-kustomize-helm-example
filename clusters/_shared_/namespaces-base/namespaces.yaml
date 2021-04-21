@@ -3,21 +3,29 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: default
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-default"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: kube-system
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-default"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: kube-node-lease
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-default"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: kube-public
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-default"
 ---
 apiVersion: v1
 kind: Namespace
@@ -30,11 +38,15 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: nginx
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-ingress"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: redis
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-cache"
 ---
 apiVersion: v1
 kind: Namespace
