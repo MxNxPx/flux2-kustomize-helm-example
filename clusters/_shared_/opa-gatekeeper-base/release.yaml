@@ -24,26 +24,4 @@ spec:
   postRenderers: 
     - kustomize:
         patchesStrategicMerge:
-          -
-          apiVersion: apps/v1
-          kind: Deployment
-          metadata:
-            name: gatekeeper-controller-manager
-            namespace: gatekeeper-system
-          spec:
-            template:
-              spec:
-                containers:
-                - name: manager
-                  args:
-                  - --port=8443
-                  - --logtostderr
-                  - --operation=webhook
-                  - --exempt-namespace=gatekeeper-system
-                  - --exempt-namespace=flux-system
-                  - --exempt-namespace=kube-system
-                  - --exempt-namespace=kube-node-lease
-                  - --exempt-namespace=kube-public
-                  - --exempt-namespace=podinfo
-                  - --exempt-namespace=redis
-                  - --exempt-namespace=nginx
+          - ./gatekeeper-patch.yaml
