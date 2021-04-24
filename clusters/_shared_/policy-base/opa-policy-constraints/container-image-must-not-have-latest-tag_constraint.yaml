@@ -7,7 +7,5 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
-    namespaces:
-      - "default"
   parameters:
     tags: ["latest"]
