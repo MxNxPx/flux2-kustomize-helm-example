@@ -23,8 +23,7 @@ spec:
       rebootDays: [mo,tu,we]     # only reboot on these days (default [su,mo,tu,we,th,fr,sa])
       startTime: "12:00"         # only reboot after this time of day (default "0:00")
       endTime: "20:00"           # only reboot before this time of day (default "23:59")
-      timeZone: "UTC"               # time-zone to use (valid zones from "time" golang package)
-      annotateNodes: true       # enable 'weave.works/kured-reboot-in-progress' and 'weave.works/kured-most-recent-reboot-needed' node annotations to signify kured reboot operations
+      timeZone: "UTC"            # time-zone to use (valid zones from "time" golang package)
 #    metrics:
 #      create: true
 #    service:
