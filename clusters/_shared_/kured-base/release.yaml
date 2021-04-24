@@ -25,10 +25,10 @@ spec:
       endTime: "20:00"           # only reboot before this time of day (default "23:59")
       timeZone: "UTC"               # time-zone to use (valid zones from "time" golang package)
       annotateNodes: true       # enable 'weave.works/kured-reboot-in-progress' and 'weave.works/kured-most-recent-reboot-needed' node annotations to signify kured reboot operations
-    metrics:
-      create: true
-    service:
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: "/metrics"
-        prometheus.io/port: "8080"
+#    metrics:
+#      create: true
+#    service:
+#      annotations:
+#        prometheus.io/scrape: "true"
+#        prometheus.io/path: "/metrics"
+#        prometheus.io/port: "8080"
