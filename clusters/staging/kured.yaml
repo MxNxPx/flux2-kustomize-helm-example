@@ -7,7 +7,7 @@ spec:
   dependsOn:
     - name: sources
     - name: namespaces
-    - name: monitoring
+#    - name: monitoring
   interval: 0h5m0s
   sourceRef:
     kind: GitRepository
