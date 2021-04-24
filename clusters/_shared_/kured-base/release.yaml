@@ -9,7 +9,7 @@ spec:
       chart: kured
       sourceRef:
         kind: HelmRepository
-        name: appscode
+        name: kured
         namespace: flux-system
       version: "2.4.3"
   interval: 0h5m0s
