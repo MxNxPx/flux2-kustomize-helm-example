@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: appscode
         namespace: flux-system
-      version: "v0.12.0"
+      version: "2.4.3"
   interval: 0h5m0s
   install:
     remediation:
