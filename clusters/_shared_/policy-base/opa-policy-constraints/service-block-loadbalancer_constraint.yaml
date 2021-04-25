@@ -1,7 +1,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sBlockLoadBalancer
 metadata:
-  name: block-loadbalancer
+  name: service-block-loadbalancer
 spec:
   match:
     kinds:

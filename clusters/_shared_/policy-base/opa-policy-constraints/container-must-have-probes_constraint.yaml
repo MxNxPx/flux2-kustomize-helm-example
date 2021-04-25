@@ -1,7 +1,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRequiredProbes
 metadata:
-  name: must-have-probes
+  name: container-must-have-probes
 spec:
   match:
     kinds:
