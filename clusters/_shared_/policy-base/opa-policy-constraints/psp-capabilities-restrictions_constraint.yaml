@@ -8,15 +8,16 @@ spec:
       - apiGroups: [""]
         kinds: ["Pod"]
   parameters:
-    #allowedCapabilities: ["SYS_NICE"]
-    requiredDropCapabilities:
-      - FSETID
-      - SETUID
-      - SETGID
-      - SYS_CHROOT
-      - SYS_PTRACE
-      - CHOWN
-      - NET_RAW
-      - NET_ADMIN
-      - SYS_ADMIN
-      - NET_BIND_SERVICE 
+    allowedCapabilities: 
+      - SYS_NICE
+#    requiredDropCapabilities:
+#      - FSETID
+#      - SETUID
+#      - SETGID
+#      - SYS_CHROOT
+#      - SYS_PTRACE
+#      - CHOWN
+#      - NET_RAW
+#      - NET_ADMIN
+#      - SYS_ADMIN
+#      - NET_BIND_SERVICE 
