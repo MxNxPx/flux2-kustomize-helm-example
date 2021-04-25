@@ -1,7 +1,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sBlockNodePort
+kind: K8sBlockLoadBalancer
 metadata:
-  name: block-node-port
+  name: block-loadbalancer
 spec:
   match:
     kinds:
