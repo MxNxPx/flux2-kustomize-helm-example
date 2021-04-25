@@ -20,7 +20,7 @@ spec:
   values:
     configuration:
       period: "1h0m0s"           # reboot check period (default 1h0m0s)
-      rebootDays: [mo,tu,we]     # only reboot on these days (default [su,mo,tu,we,th,fr,sa])
+      rebootDays: [mo,tu,we,th]  # only reboot on these days (default [su,mo,tu,we,th,fr,sa])
       startTime: "12:00"         # only reboot after this time of day (default "0:00")
       endTime: "20:00"           # only reboot before this time of day (default "23:59")
       timeZone: "UTC"            # time-zone to use (valid zones from "time" golang package)
