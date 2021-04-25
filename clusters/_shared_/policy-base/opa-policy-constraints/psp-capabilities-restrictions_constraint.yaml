@@ -1,0 +1,22 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sPSPCapabilities
+metadata:
+  name: psp-capabilities-restrictions
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+  parameters:
+    #allowedCapabilities: ["SYS_NICE"]
+    requiredDropCapabilities:
+      - FSETID
+      - SETUID
+      - SETGID
+      - SYS_CHROOT
+      - SYS_PTRACE
+      - CHOWN
+      - NET_RAW
+      - NET_ADMIN
+      - SYS_ADMIN
+      - NET_BIND_SERVICE 
