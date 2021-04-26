@@ -9,14 +9,11 @@ spec:
       chart: kube-state-metrics
       sourceRef:
         kind: HelmRepository
-        name: stevehipwell.github.io
+        name: kube-state-metrics
         namespace: flux-system
-      version: "3.1.0"
+      version: "2.13.2"
   interval: 0h5m0s
   install:
     remediation:
       retries: 3
   # Default values
-  values:
-    args:
-      - --kubelet-insecure-tls
