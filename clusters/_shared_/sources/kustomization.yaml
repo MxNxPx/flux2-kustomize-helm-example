@@ -8,3 +8,4 @@ resources:
   - appscode.yaml
   - gatekeeper.yaml
   - kured.yaml
+  - stakater.yaml
