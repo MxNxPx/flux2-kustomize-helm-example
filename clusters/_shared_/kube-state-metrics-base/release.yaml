@@ -9,15 +9,14 @@ spec:
       chart: kube-state-metrics
       sourceRef:
         kind: HelmRepository
-        name: kube-state-metrics
+        name: stevehipwell.github.io
         namespace: flux-system
-      version: "2.13.1"
+      version: "3.1.0"
   interval: 0h5m0s
   install:
     remediation:
       retries: 3
   # Default values
   values:
-    extraArgs:
-      kubelet-insecure-tls: true
-      kubelet-preferred-address-types: InternalIP
+    args:
+      - --kubelet-insecure-tls
