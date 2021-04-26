@@ -20,3 +20,5 @@ spec:
     extraArgs:
       kubelet-insecure-tls: true
       kubelet-preferred-address-types: InternalIP
+    apiService:
+      create: true
