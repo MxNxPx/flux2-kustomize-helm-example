@@ -8,4 +8,3 @@ resources:
   - appscode.yaml
   - gatekeeper.yaml
   - kured.yaml
-  - stevehipwell.github.io.yaml
