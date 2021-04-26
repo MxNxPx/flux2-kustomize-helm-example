@@ -18,5 +18,6 @@ spec:
       retries: 3
   # Default values
   values:
-    args:
-      - --kubelet-insecure-tls
+    extraArgs:
+      kubelet-insecure-tls: true
+      kubelet-preferred-address-types: InternalIP
