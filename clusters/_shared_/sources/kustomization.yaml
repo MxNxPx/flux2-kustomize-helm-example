@@ -9,3 +9,4 @@ resources:
   - gatekeeper.yaml
   - kured.yaml
   - stakater.yaml
+  - bitnami-labs-sealed-secrets.yaml
