@@ -8,6 +8,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  #path: ./clusters/_shared_/namespaces-base
   path: ./clusters/staging/namespaces
   prune: true
   validation: client

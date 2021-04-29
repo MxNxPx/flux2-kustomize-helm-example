@@ -2,6 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 ## build list from shared dir
 # touch kustomization.yaml && kustomize edit add resource ../../_shared_/namespaces-base/*-ns.yaml
+## add to list from local dir
+# touch kustomization.yaml && kustomize edit add resource *-ns.yaml
 resources:
 - ../../_shared_/namespaces-base/default-ns.yaml
 - ../../_shared_/namespaces-base/gatekeeper-system-ns.yaml
@@ -11,6 +13,4 @@ resources:
 - ../../_shared_/namespaces-base/nginx-ns.yaml
 - ../../_shared_/namespaces-base/podinfo-ns.yaml
 - ../../_shared_/namespaces-base/redis-ns.yaml
-## add to list from local dir
-# touch kustomization.yaml && kustomize edit add resource *-ns.yaml
 - staging-test-ns.yaml

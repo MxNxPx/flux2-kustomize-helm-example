@@ -11,6 +11,6 @@
 #  sourceRef:
 #    kind: GitRepository
 #    name: flux-system
-#  path: ./clusters/staging/monitoring
+#  path: ./clusters/_shared_/monitoring
 #  prune: true
 #  validation: client

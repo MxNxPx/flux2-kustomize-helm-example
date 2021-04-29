@@ -12,6 +12,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./clusters/staging/kured
+  path: ./clusters/_shared_/kured-base
   prune: true
   validation: client

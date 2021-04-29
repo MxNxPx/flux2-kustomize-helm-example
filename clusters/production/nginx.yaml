@@ -11,7 +11,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./clusters/staging/nginx
+  path: ./clusters/_shared_/nginx
   prune: true
   validation: client
   healthChecks:

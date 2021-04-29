@@ -11,9 +11,9 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./clusters/staging/opa-gatekeeper
+  path: ./clusters/_shared_/opa-gatekeeper
   prune: true
-  validation: none
+  validation: client
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
