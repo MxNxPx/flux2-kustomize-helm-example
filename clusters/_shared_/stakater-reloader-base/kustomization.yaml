@@ -4,4 +4,4 @@ namespace: kube-system
 metadata:
   name: stakater-reloader
 resources:
-  - ./stakater-reloader-base/release.yaml
+  - release.yaml
