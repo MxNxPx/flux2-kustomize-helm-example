@@ -9,6 +9,6 @@ spec:
     kind: GitRepository
     name: flux-system
   #path: ./clusters/_shared_/namespaces-base
-  path: ./clusters/staging/namespaces
+  path: ./clusters/production/namespaces
   prune: true
   validation: client
