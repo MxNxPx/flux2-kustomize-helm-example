@@ -11,6 +11,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./clusters/_shared_/metrics-server
+  path: ./clusters/_shared_/metrics-server-base
   prune: true
   validation: client

@@ -9,7 +9,7 @@ spec:
     - name: namespaces
     - name: opa-gatekeeper
   interval: 5m
-  path: "./clusters/_shared_/policy"
+  path: ./clusters/_shared_/policy-base
   prune: true
   sourceRef:
     kind: GitRepository
