@@ -11,3 +11,4 @@ resources:
   - stakater.yaml
   - bitnami-labs-sealed-secrets.yaml
   - prometheus-community.yaml
+  - deliveryhero.yaml
