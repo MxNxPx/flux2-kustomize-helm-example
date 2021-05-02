@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kube-cost
+  labels:
+    admission.gatekeeper.sh/ignore: "cluster-finance"
+---
