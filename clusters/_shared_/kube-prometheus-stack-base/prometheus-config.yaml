@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: kube-prometheus-s
+    - name: kube-prometheus-stack
   interval: 1m
   validation: none
   path: "./clusters/_shared_/kube-prometheus-stack-base/prometheus-config"
