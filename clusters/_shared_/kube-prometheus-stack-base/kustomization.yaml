@@ -7,7 +7,7 @@ resources:
 generatorOptions:
   # labels to add to all generated resources
   labels:
-    grafana_dashboard: 1
+    grafana_dashboard: "1"
   # disableNameSuffixHash is true disables the default behavior of adding a
   # suffix to the names of generated resources that is a hash of
   # the resource contents.
