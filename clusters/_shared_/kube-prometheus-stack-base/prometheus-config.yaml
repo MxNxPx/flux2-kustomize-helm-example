@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: prometheus-config
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: kube-prometheus-s
+  interval: 1m
+  validation: none
+  path: "./clusters/_shared_/kube-prometheus-stack-base/prometheus-config"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
