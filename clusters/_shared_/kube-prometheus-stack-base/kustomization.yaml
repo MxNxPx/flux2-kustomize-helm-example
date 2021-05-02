@@ -18,3 +18,8 @@ configMapGenerator:
     files:
       - grafana-dashboards/control-plane.json
       - grafana-dashboards/cluster.json
+
+secretGenerator:
+- name: additional-scrape-configs
+  files:
+  - prometheus-additionalScrapeConfig.yaml

@@ -17,3 +17,8 @@ spec:
     remediation:
       retries: 3
   # Default values
+  values:
+    additionalScrapeConfigsSecret:
+      enabled: true
+      name: additional-scrape-configs
+      key: prometheus-additionalScrapeConfig.yaml
