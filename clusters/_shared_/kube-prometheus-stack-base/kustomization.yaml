@@ -3,11 +3,10 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - release.yaml
-  - prometheus-configs/
-  - helm-controller-podmonitor.yaml
-  - kustomize-controller-podmonitor.yaml
-  - notification-controller-podmonitor.yaml
-  - source-controller-podmonitor.yaml
+  - prometheus-configs/helm-controller-podmonitor.yaml
+  - prometheus-configs/kustomize-controller-podmonitor.yaml
+  - prometheus-configs/notification-controller-podmonitor.yaml
+  - prometheus-configs/source-controller-podmonitor.yaml
 
 generatorOptions:
   # labels to add to all generated resources
