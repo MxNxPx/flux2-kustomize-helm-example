@@ -3,6 +3,11 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - release.yaml
+  - prometheus-configs/
+  - helm-controller-podmonitor.yaml
+  - kustomize-controller-podmonitor.yaml
+  - notification-controller-podmonitor.yaml
+  - source-controller-podmonitor.yaml
 
 generatorOptions:
   # labels to add to all generated resources
@@ -22,4 +27,4 @@ configMapGenerator:
 secretGenerator:
 - name: additional-scrape-configs
   files:
-  - prometheus-additionalScrapeConfig.yaml
+  - prometheus-configs/prometheus-additionalScrapeConfig.yaml
