@@ -1,45 +1,23 @@
 # flux2-kustomize-helm-example
 
-[![test](https://github.com/fluxcd/flux2-kustomize-helm-example/workflows/test/badge.svg)](https://github.com/fluxcd/flux2-kustomize-helm-example/actions)
-[![e2e](https://github.com/fluxcd/flux2-kustomize-helm-example/workflows/e2e/badge.svg)](https://github.com/fluxcd/flux2-kustomize-helm-example/actions)
-[![license](https://img.shields.io/github/license/fluxcd/flux2-kustomize-helm-example.svg)](https://github.com/fluxcd/flux2-kustomize-helm-example/blob/main/LICENSE)
-
 For this example we assume a scenario with two clusters: staging and production.
 The end goal is to leverage Flux and Kustomize to manage both clusters while minimizing duplicated declarations.
-
-We will configure Flux to install, test and upgrade a demo app using
-`HelmRepository` and `HelmRelease` custom resources.
-Flux will monitor the Helm repository, and it will automatically
-upgrade the Helm releases to their latest chart version based on semver ranges.
 
 ## Prerequisites
 
 You will need a Kubernetes cluster version 1.16 or newer and kubectl version 1.18.
-For a quick local test, you can use [Kubernetes kind](https://kind.sigs.k8s.io/docs/user/quick-start/).
-Any other Kubernetes setup will work as well though.
 
 In order to follow the guide you'll need a GitHub account and a
 [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 that can create repositories (check all permissions under `repo`).
 
-Install the Flux CLI on MacOS and Linux using Homebrew:
-
-```sh
-brew install fluxcd/tap/flux
-```
-
-Or install the CLI by downloading precompiled binaries using a Bash script:
-
-```sh
-curl -s https://toolkit.fluxcd.io/install.sh | sudo bash
-```
+Install the Flux CLI.
 
 ## Repository structure
 
 The Git repository contains the following top directories:
 
 - **apps** dir contains Helm releases with a custom configuration per cluster
-- **infrastructure** dir contains common infra tools such as NGINX ingress controller and Helm repository definitions
 - **clusters** dir contains the Flux configuration per cluster
 
 ```
@@ -47,11 +25,8 @@ The Git repository contains the following top directories:
 │   ├── base
 │   ├── production 
 │   └── staging
-├── infrastructure
-│   ├── nginx
-│   ├── redis
-│   └── sources
 └── clusters
+    ├── _shared_
     ├── production
     └── staging
 ```
