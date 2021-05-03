@@ -11,6 +11,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./clusters/_shared_/flux-alerts-base
+  path: ./clusters/staging/flux-alerts
   prune: true
   validation: client
