@@ -4,7 +4,7 @@ metadata:
   name: notification-controller
   namespace: flux-system
   labels:
-    release: kube-prometheus-stack
+    prometheusPodMonitor: include
 spec:
   namespaceSelector:
     matchNames:
