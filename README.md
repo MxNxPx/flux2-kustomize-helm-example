@@ -493,13 +493,3 @@ flux reconcile kustomization flux-system \
     --context=production-clone \
     --with-source 
 ```
-
-## Testing
-
-Any change to the Kubernetes manifests or to the repository structure should be validated in CI before
-a pull requests is merged into the main branch and synced on the cluster.
-
-This repository contains the following GitHub CI workflows:
-
-* the [test](./.github/workflows/test.yaml) workflow validates the Kubernetes manifests and Kustomize overlays with kubeval
-* the [e2e](./.github/workflows/e2e.yaml) workflow starts a Kubernetes cluster in CI and tests the staging setup by running Flux in Kubernetes Kind
