@@ -26,6 +26,19 @@ configMapGenerator:
     files:
       - ../../_shared_/kube-prometheus-stack-base/grafana-dashboards/node-exporter-full_rev22.json
 
+patchesJSON6902:
+- target:
+    version: v1
+    kind: ConfigMap
+    name: grafana-dashboard-3
+    namespace: kube-system
+  patch: |-
+    - op: replace
+      path: /metadata/annotations
+      value:
+        - kubectl.kubernetes.io/last-applied-configuration: "removed-by-flux"
+
+
 #secretGenerator:
 #- name: additional-scrape-configs
 #  files:
