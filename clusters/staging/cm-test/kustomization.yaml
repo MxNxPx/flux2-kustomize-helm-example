@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: kube-system
 resources:
-  - release.yaml
+#  - release.yaml
 
 generatorOptions:
   # labels to add to all generated resources
@@ -18,15 +18,15 @@ generatorOptions:
 configMapGenerator:
   - name: grafana-dashboard-1
     files:
-      - grafana-dashboards/control-plane.json
+      - ../../_shared_/kube-prometheus-stack-base/grafana-dashboards/control-plane.json
   - name: grafana-dashbard-2
     files:
-      - grafana-dashboards/cluster.json
+      - ../../_shared_/kube-prometheus-stack-base/grafana-dashboards/cluster.json
   - name: grafana-dashbard-3
     files:
-      - grafana-dashboards/node-exporter-full_rev22.json
+      - ../../_shared_/kube-prometheus-stack-base/grafana-dashboards/node-exporter-full_rev22.json
 
-secretGenerator:
-- name: additional-scrape-configs
-  files:
-  - prometheus-additionalScrapeConfig.yaml
+#secretGenerator:
+#- name: additional-scrape-configs
+#  files:
+#  - prometheus-additionalScrapeConfig.yaml
