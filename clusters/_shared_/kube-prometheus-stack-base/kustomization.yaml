@@ -22,9 +22,6 @@ configMapGenerator:
   - name: grafana-dashbard-2
     files:
       - grafana-dashboards/cluster.json
-  - name: grafana-dashbard-3
-    files:
-      - grafana-dashboards/node-exporter-full_rev22.json
 
 secretGenerator:
 - name: additional-scrape-configs

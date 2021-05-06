@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: gatekeeper-audit
+  namespace: gatekeeper-system
+  labels:
+    prometheusPodMonitor: include
+spec:
+  namespaceSelector:
+    matchNames:
+      - gatekeeper-system
+  selector:
+    matchLabels:
+      control-plane: audit-controller
+  podMetricsEndpoints:
+  - port: metrics

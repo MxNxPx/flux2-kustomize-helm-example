@@ -6,3 +6,5 @@ resources:
   - kustomize-controller-podmonitor.yaml
   - notification-controller-podmonitor.yaml
   - source-controller-podmonitor.yaml
+  - gatekeeper-audit-podmonitor.yaml
+  - gatekeeper-controller-manager-podmonitor.yaml
