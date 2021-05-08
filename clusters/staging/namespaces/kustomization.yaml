@@ -3,9 +3,8 @@ kind: Kustomization
 ## build list from shared dir
 # touch kustomization.yaml && kustomize edit add resource ../../_shared_/namespaces-base/ns-manifests/*.yaml
 ## add to list from local dir
-# touch kustomization.yaml && kustomize edit add resource *-ns.yaml
+# touch kustomization.yaml && kustomize edit add resource additional-ns-manifests/*.yaml
 resources:
-- ../../_shared_/namespaces-base/ns-manifests/
 - ../../_shared_/namespaces-base/ns-manifests/default-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/gatekeeper-system-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/kube-node-lease-ns.yaml
@@ -14,4 +13,4 @@ resources:
 - ../../_shared_/namespaces-base/ns-manifests/nginx-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/podinfo-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/redis-ns.yaml
-- staging-test-ns.yaml
+- additional-ns-manifests/staging-test-ns.yaml
