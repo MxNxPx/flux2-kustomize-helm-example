@@ -27,13 +27,13 @@ spec:
         podMonitorSelector:
           matchLabels:
             prometheusPodMonitor: include
-  postRenderers: 
-  - kustomize:
-      patchesStrategicMerge:
-      - apiVersion: apps/v1
-        kind: Deployment
-        metadata:
-          name: kube-prometheus-stack-grafana
-          namespace: kube-system
-          annotations:
-            reloader.stakater.com/auto: "true"
+#  postRenderers: 
+#  - kustomize:
+#      patchesStrategicMerge:
+#      - apiVersion: apps/v1
+#        kind: Deployment
+#        metadata:
+#          name: kube-prometheus-stack-grafana
+#          namespace: kube-system
+#          annotations:
+#            wave.pusher.com/update-on-config-change: "true"

@@ -12,3 +12,4 @@ resources:
   - bitnami-labs-sealed-secrets.yaml
   - prometheus-community.yaml
   - deliveryhero.yaml
+  - wave-k8s.yaml
