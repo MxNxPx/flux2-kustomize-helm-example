@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: staging-test-ns-quota
+  namespace: staging-test
+spec:
+  hard:
+    requests.cpu: "0.5"
+    requests.memory: 100Mi
+    limits.cpu: "1"
+    limits.memory: 500Mi
+    pods: "5"
