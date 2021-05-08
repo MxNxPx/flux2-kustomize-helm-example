@@ -22,6 +22,9 @@ configMapGenerator:
   - name: grafana-dashbard-2
     files:
       - grafana-dashboards/cluster.json
+  - name: grafana-dashbard-3
+    files:
+      - grafana-dashboards/kubernetes-apps_rev1.json
 
 secretGenerator:
 - name: additional-scrape-configs
