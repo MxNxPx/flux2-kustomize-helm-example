@@ -1556,7 +1556,7 @@
         "current": {
           "selected": false,
           "text": "Prometheus",
-          "value": "Prometheus"
+          "value": "prometheus"
         },
         "description": null,
         "error": null,
@@ -1568,7 +1568,6 @@
         "options": [],
         "query": "prometheus",
         "refresh": 1,
-        "regex": "/^k8s/",
         "skipUrlSync": false,
         "type": "datasource"
       },
