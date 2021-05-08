@@ -25,9 +25,10 @@ configMapGenerator:
   - name: grafana-dashbard-3
     files:
       - grafana-dashboards/kubernetes-apps_rev1.json
+  # https://grafana.com/grafana/dashboards/9809
   - name: grafana-dashbard-4
     files:
-      - grafana-dashboards/top-10-project-namespace-based-on-memory_rev1.json
+      - grafana-dashboards/namespace-resources.json
 
 secretGenerator:
 - name: additional-scrape-configs
