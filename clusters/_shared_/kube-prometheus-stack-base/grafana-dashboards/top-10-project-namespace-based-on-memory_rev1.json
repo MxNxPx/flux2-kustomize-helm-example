@@ -343,6 +343,7 @@
         "skipUrlSync": false,
         "type": "datasource"
       }
+    ]
   },
   "time": {
     "from": "now-7d",
