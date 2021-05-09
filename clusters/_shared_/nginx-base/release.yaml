@@ -12,7 +12,7 @@ spec:
         name: bitnami
         namespace: flux-system
       #https://artifacthub.io/packages/helm/bitnami/nginx-ingress-controller
-      version: "5.6.14"
+      version: "8.9.0"
       #version: "5.6.13"
   interval: 0h5m0s
   install:
