@@ -1,0 +1,17 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: gatekeeper-policy-manager
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: sources
+    - name: namespaces
+    - name: policy
+  interval: 0h5m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./clusters/_shared_/gatekeeper-policy-manager-base
+  prune: true
+  validation: client
