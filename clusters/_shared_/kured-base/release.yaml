@@ -24,10 +24,9 @@ spec:
       startTime: "12:00"         # only reboot after this time of day (default "0:00")
       endTime: "20:00"           # only reboot before this time of day (default "23:59")
       timeZone: "UTC"            # time-zone to use (valid zones from "time" golang package)
-#    metrics:
-#      create: true
-#    service:
-#      annotations:
-#        prometheus.io/scrape: "true"
-#        prometheus.io/path: "/metrics"
-#        prometheus.io/port: "8080"
+    metrics:
+      create: true
+    podAnnotations:
+      prometheus.io/scrape: "true"
+      prometheus.io/path: "/metrics"
+      prometheus.io/port: "8080"

@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- manifests/gatekeeper-audit-podmonitor.yaml
+- manifests/gatekeeper-controller-manager-podmonitor.yaml
+- manifests/helm-controller-podmonitor.yaml
+- manifests/kured-podmonitor.yaml
+- manifests/kustomize-controller-podmonitor.yaml
+- manifests/notification-controller-podmonitor.yaml
+- manifests/source-controller-podmonitor.yaml
