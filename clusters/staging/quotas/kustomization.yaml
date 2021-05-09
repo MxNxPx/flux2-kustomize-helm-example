@@ -5,5 +5,5 @@ kind: Kustomization
 ## add to list from local dir
 # touch kustomization.yaml && kustomize edit add resource additional-quota-manifests/*.yaml
 resources:
-- ../../_shared_/namespaces-base/quota-manifests/nginx-quota.yaml
+- ../../_shared_/namespaces-base/quota-manifests/flux-system-quota.yaml
 - additional-quota-manifests/staging-test-quota.yaml
