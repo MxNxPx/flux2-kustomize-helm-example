@@ -10,6 +10,7 @@ resources:
 - ../../_shared_/namespaces-base/ns-manifests/kube-node-lease-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/kube-public-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/kube-system-ns.yaml
+- ../../_shared_/namespaces-base/ns-manifests/local-path-storage-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/nginx-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/podinfo-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/redis-ns.yaml
