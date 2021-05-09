@@ -2,14 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: flux-system
 resources:
-  - bitnami.yaml
-  - podinfo.yaml
-  - kube-state-metrics.yaml
-  - appscode.yaml
-  - gatekeeper.yaml
-  - kured.yaml
-  - stakater.yaml
-  - bitnami-labs-sealed-secrets.yaml
-  - prometheus-community.yaml
-  - deliveryhero.yaml
-  - wave-k8s.yaml
+- manifests/appscode.yaml
+- manifests/bitnami-labs-sealed-secrets.yaml
+- manifests/bitnami.yaml
+- manifests/deliveryhero.yaml
+- manifests/gatekeeper.yaml
+- manifests/kube-state-metrics.yaml
+- manifests/kured.yaml
+- manifests/podinfo.yaml
+- manifests/portainer.yaml
+- manifests/prometheus-community.yaml
+- manifests/stakater.yaml
+- manifests/wave-k8s.yaml
