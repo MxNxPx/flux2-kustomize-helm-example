@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: flux-system
 ## build out list from manifests dir
 # kustomize edit add resource manifests/*.yaml
+## WARNING: do NOT add any sections below "resources:"
 resources:
 - manifests/appscode.yaml
 - manifests/bitnami-labs-sealed-secrets.yaml
