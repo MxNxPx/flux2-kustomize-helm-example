@@ -52,4 +52,5 @@ spec:
                 - --exempt-namespace=nginx
                 - --exempt-namespace=staging-test
                 - --exempt-namespace=local-path-storage
+                - --exempt-namespace=ingress-nginx-too
                 #- --exempt-namespace=kubecost

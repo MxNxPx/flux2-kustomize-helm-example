@@ -15,3 +15,4 @@ resources:
 - ../../_shared_/namespaces-base/ns-manifests/podinfo-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/redis-ns.yaml
 - additional-ns-manifests/staging-test-ns.yaml
+- additional-ns-manifests/ingress-nginx-too-ns.yaml
