@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#SAVEIFS=$IFS
+for i in $(find . -type f -name 'kustomization.yaml'); do
+  echo "[-] file: $i"
+  start_dir=$(pwd)
+
+  command_test=$(grep -q "^#touch kustomization.yaml" $i)
+  command_list=$(grep "^#touch kustomization.yaml" $i 2>/dev/null)
+  if [[ $? = 0 ]]; then
+    echo "[*] updating $i"
+    cd $(dirname $i)
+#    sed -i '/^resources:$/q' kustomization.yaml
+
+    #while read -r line; do
+    #   echo "$line"
+    #done < <(grep "^#touch kustomization.yaml" $i 2>/dev/null)
+
+    while IFS= read -r cmd; do
+      echo "$cmd"
+    done <<< "$command_list"
+
+    cd $start_dir
+  fi
+#  IFS=$SAVEIFS
+
+done

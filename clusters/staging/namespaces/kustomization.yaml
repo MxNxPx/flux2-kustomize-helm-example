@@ -1,9 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-## build list from shared dir
-# touch kustomization.yaml && kustomize edit add resource ../../_shared_/namespaces-base/ns-manifests/*.yaml
-## add to list from local dir
-# touch kustomization.yaml && kustomize edit add resource additional-ns-manifests/*.yaml
+## build list from shared and local dirs
+#touch kustomization.yaml && kustomize edit add resource ../../_shared_/namespaces-base/ns-manifests/*.yaml additional-ns-manifests/*.yaml
+#touch kustomization.yaml && kustomize edit add resource ../../_shared_/namespaces-base/quota-manifests/*.yaml additional-quota-manifests/*.yaml
 resources:
 - ../../_shared_/namespaces-base/ns-manifests/default-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/gatekeeper-system-ns.yaml
@@ -14,5 +13,7 @@ resources:
 - ../../_shared_/namespaces-base/ns-manifests/nginx-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/podinfo-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/redis-ns.yaml
-- additional-ns-manifests/staging-test-ns.yaml
 - additional-ns-manifests/ingress-nginx-too-ns.yaml
+- additional-ns-manifests/staging-test-ns.yaml
+- ../../_shared_/namespaces-base/quota-manifests/flux-system-quota.yaml
+- additional-quota-manifests/staging-test-quota.yaml
