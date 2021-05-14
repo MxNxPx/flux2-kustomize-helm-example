@@ -54,4 +54,5 @@ spec:
                 - --exempt-namespace=local-path-storage
                 - --exempt-namespace=ingress-nginx
                 - --exempt-namespace=ingress-nginx-too
+                - --exempt-namespace=metallb-system
                 #- --exempt-namespace=kubecost
