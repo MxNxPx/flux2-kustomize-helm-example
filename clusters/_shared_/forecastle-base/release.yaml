@@ -20,7 +20,7 @@ spec:
     forecastle:
       config:
         namespaceSelector: 
-        - any
+          any: true
       ingress:
         enabled: true
         annotations:
