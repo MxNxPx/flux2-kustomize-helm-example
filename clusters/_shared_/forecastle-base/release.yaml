@@ -19,7 +19,8 @@ spec:
   values:
     forecastle:
       config:
-        namespaceSelector: any
+        namespaceSelector: 
+        - any
       ingress:
         enabled: true
         annotations:
