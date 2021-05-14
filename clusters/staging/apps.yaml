@@ -8,7 +8,7 @@ spec:
   dependsOn:
     - name: sources
     - name: namespaces
-    - name: redis
+#    - name: redis
   sourceRef:
     kind: GitRepository
     name: flux-system
