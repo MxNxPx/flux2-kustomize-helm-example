@@ -10,9 +10,11 @@ resources:
 - ../../_shared_/namespaces-base/ns-manifests/kube-public-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/kube-system-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/local-path-storage-ns.yaml
+- ../../_shared_/namespaces-base/ns-manifests/metallb-system-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/nginx-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/podinfo-ns.yaml
 - ../../_shared_/namespaces-base/ns-manifests/redis-ns.yaml
+- additional-ns-manifests/ingress-nginx-ns.yaml
 - additional-ns-manifests/ingress-nginx-too-ns.yaml
 - additional-ns-manifests/staging-test-ns.yaml
 - ../../_shared_/namespaces-base/quota-manifests/flux-system-quota.yaml
