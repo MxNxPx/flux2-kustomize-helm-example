@@ -3,3 +3,5 @@ kind: Kustomization
 namespace: gatekeeper-system
 resources:
   - gatekeeper-ingress.yaml
+  - forecastle-ingress.yaml
+  - metallb-cm.yaml

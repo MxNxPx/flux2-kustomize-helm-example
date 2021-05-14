@@ -21,11 +21,11 @@ spec:
       config:
         namespaceSelector: 
           any: true
-      ingress:
-        enabled: true
-        annotations:
-          kubernetes.io/ingress.class: "nginx"
-        hosts:
-        - host: forecastle.10.195.65.184.nip.io
-          paths:
-          - /
+#      ingress:
+#        enabled: true
+#        annotations:
+#          kubernetes.io/ingress.class: "nginx"
+#        hosts:
+#        - host: forecastle.10.195.65.184.nip.io
+#          paths:
+#          - /
