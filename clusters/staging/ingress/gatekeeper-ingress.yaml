@@ -11,6 +11,7 @@ metadata:
     forecastle.stakater.com/appName: "Gatekeeper Policy Manager"
     forecastle.stakater.com/icon: "https://raw.githubusercontent.com/sighupio/gatekeeper-policy-manager/master/app/static/user-tie.svg"
   name: gatekeeper-policy-manager
+  namespace: gatekeeper-system
 spec:
   rules:
   # Set the HOST accordingly
