@@ -36,4 +36,4 @@ spec:
         # will all share the same settings. Each range can be either a
         # CIDR prefix, or an explicit start-end range of IPs.
         addresses:
-        - 10.195.65.243/32
+        - 172.18.255.200-172.18.255.250
