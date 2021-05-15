@@ -17,5 +17,5 @@ spec:
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: nginx-ingress-controller
+      name: ingress-nginx-too-controller
       namespace: ingress-nginx-too
