@@ -13,7 +13,7 @@ metadata:
   namespace: kube-system
 spec:
   rules:
-  - host: forecastle.10.195.65.184.nip.io
+  - host: forecastle.10.195.65.23.nip.io
     http:
       paths:
       - backend:

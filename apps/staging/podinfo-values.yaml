@@ -12,4 +12,4 @@ spec:
   values:
     ingress:
       hosts:
-        - podinfo.10.195.65.184.nip.io
+        - podinfo.10.195.65.23.nip.io
