@@ -3,12 +3,12 @@ kind: ConfigMap
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: ""
-    app.kubernetes.io/managed-by: "Helm"
     meta.helm.sh/release-name: "metallb"
     meta.helm.sh/release-namespace: "metallb-system"
   labels:
     app.kubernetes.io/instance: metallb
     app.kubernetes.io/name: metallb
+    app.kubernetes.io/managed-by: "Helm"
   name: metallb-config
   namespace: metallb-system
 data:
