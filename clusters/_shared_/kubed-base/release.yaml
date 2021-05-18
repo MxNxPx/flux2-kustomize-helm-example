@@ -14,9 +14,15 @@ spec:
       version: "v0.12.0"
   interval: 0h5m0s
   install:
+    replace: true
     remediation:
       retries: 3
-  # Default values
+    crds: CreateReplace
+  upgrade:
+    remediation:
+      retries: 3
+    crds: CreateReplace
+    cleanupOnFail: true
   values:
     criticalAddon: true
     enableAnalytics: false
