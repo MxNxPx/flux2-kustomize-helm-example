@@ -16,9 +16,15 @@ spec:
       version: "7.6.6"
   interval: 0h5m0s
   install:
+    replace: true
     remediation:
       retries: 3
-  # Default values
+    crds: CreateReplace
+  upgrade:
+    remediation:
+      retries: 3
+    crds: CreateReplace
+    cleanupOnFail: true
   # https://github.com/bitnami/charts/blob/master/bitnami/nginx-ingress-controller/values.yaml
   values:
     service:
