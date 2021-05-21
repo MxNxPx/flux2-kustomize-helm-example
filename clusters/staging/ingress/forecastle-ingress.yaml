@@ -5,6 +5,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
     meta.helm.sh/release-name: forecastle
     meta.helm.sh/release-namespace: kube-system
+    external-dns.alpha.kubernetes.io/hostname: forecastle.mxnxpx.tk
   labels:
     app: forecastle
     group: com.stakater.platform
@@ -13,7 +14,7 @@ metadata:
   namespace: kube-system
 spec:
   rules:
-  - host: forecastle.10.195.65.23.nip.io
+  - host: forecastle.10.195.65.109.nip.io
     http:
       paths:
       - backend:
