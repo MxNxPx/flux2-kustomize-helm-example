@@ -18,7 +18,7 @@ spec:
         - name: external-dns
           image: k8s.gcr.io/external-dns/external-dns
           args:
-            - --source=service
+            #- --source=service
             - --source=ingress
             #- --registry=txt
             - --provider=cloudflare
