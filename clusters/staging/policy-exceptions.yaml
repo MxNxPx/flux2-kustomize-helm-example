@@ -9,9 +9,9 @@ spec:
     - name: namespaces
     - name: opa-gatekeeper
   interval: 5m
-  path: https://github.com/MxNxPx/flux2-policy/opa-policy-constraints
+  path: ./opa-policy-constraints
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: policy-exceptions
   validation: none
