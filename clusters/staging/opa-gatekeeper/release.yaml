@@ -48,7 +48,7 @@ spec:
                 - --exempt-namespace=kube-public
                 - --exempt-namespace=podinfo
                 - --exempt-namespace=redis
-                - --exempt-namespace=default
+                #- --exempt-namespace=default
                 - --exempt-namespace=nginx
                 - --exempt-namespace=staging-test
                 - --exempt-namespace=local-path-storage
