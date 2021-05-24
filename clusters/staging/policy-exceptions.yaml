@@ -5,9 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: sources
-    - name: namespaces
-    - name: opa-gatekeeper
+    - name: opa-policy-templates
   interval: 5m
   path: ./opa-policy-constraints
   prune: true
