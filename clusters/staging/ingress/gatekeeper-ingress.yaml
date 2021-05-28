@@ -15,7 +15,7 @@ metadata:
 spec:
   rules:
   # Set the HOST accordingly
-  - host: gatekeeper.10.195.65.109.nip.io
+  - host: gatekeeper.10.195.65.46.nip.io
     http:
       paths:
       - path: /

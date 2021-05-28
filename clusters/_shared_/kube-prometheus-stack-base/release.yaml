@@ -35,6 +35,9 @@ spec:
         podMonitorSelector:
           matchLabels:
             prometheusPodMonitor: include
+        serviceMonitorSelector:
+          matchLabels:
+            prometheusServiceMonitor: include
 #  postRenderers: 
 #  - kustomize:
 #      patchesStrategicMerge:

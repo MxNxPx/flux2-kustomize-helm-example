@@ -33,6 +33,6 @@ spec:
 #        annotations:
 #          kubernetes.io/ingress.class: "nginx"
 #        hosts:
-#        - host: forecastle.10.195.65.184.nip.io
+#        - host: forecastle.10.195.65.46.nip.io
 #          paths:
 #          - /
