@@ -8,3 +8,4 @@ resources:
 - manifests/kustomize-controller-podmonitor.yaml
 - manifests/notification-controller-podmonitor.yaml
 - manifests/source-controller-podmonitor.yaml
+#- manifests/ingress-nginx-servicemonitor.yaml

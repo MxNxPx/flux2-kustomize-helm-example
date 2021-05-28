@@ -14,8 +14,8 @@ spec:
   path: ./clusters/_shared_/nginx-base
   prune: true
   validation: client
-  healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: ingress-nginx-controller
-      namespace: ingress-nginx
+  #  healthChecks:
+  #  - apiVersion: apps/v1
+  #    kind: Deployment
+  #    name: ingress-nginx-controller
+  #    namespace: ingress-nginx
