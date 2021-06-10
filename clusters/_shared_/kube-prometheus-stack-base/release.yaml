@@ -36,7 +36,6 @@ spec:
           matchLabels:
             prometheusPodMonitor: include
     grafana:
-      adminPassword: prom-operator
       grafana.ini:
         users:
           viewers_can_edit: false
@@ -46,6 +45,12 @@ spec:
         auth.anonymous:
           enabled: true
           org_role: Viewer
+      admin:
+        existingSecret: kube-prometheus-stack-grafana
+        userKey: admin-user
+        passwordKey: admin-password
+      #adminPassword: prom-operator
+
 #        serviceMonitorSelector:
 #          matchLabels:
 #            prometheusServiceMonitor: include

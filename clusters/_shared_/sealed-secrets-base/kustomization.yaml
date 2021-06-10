@@ -4,14 +4,37 @@ namespace: kube-system
 resources:
   - release.yaml
 
-#generatorOptions:
-#  # disableNameSuffixHash is true disables the default behavior of adding a
-#  # suffix to the names of generated resources that is a hash of
-#  # the resource contents.
-#  disableNameSuffixHash: true
-#
-#secretGenerator:
-#- name: kube-prometheus-stack-grafana
-#  literals:
-#  - username=admin
-#  - password=MxNxPx
+generatorOptions:
+  # disableNameSuffixHash is true disables the default behavior of adding a
+  # suffix to the names of generated resources that is a hash of
+  # the resource contents.
+  disableNameSuffixHash: true
+
+secretGenerator:
+- name: kube-prometheus-stack-grafana
+  literals:
+  - admin-user=admin
+  - admin-password=mptest
+  - ldap-toml=""
+
+#apiVersion: v1
+#kind: Secret
+#type: Opaque
+#metadata:
+#  annotations:
+#    meta.helm.sh/release-name: kube-prometheus-stack
+#    meta.helm.sh/release-namespace: kube-system
+#  labels:
+#    app.kubernetes.io/instance: kube-prometheus-stack
+#    app.kubernetes.io/managed-by: Helm
+#    app.kubernetes.io/name: grafana
+#    app.kubernetes.io/version: 7.5.5
+#    helm.sh/chart: grafana-6.8.3
+#    helm.toolkit.fluxcd.io/name: kube-prometheus-stack
+#    helm.toolkit.fluxcd.io/namespace: kube-system
+#  name: kube-prometheus-stack-grafana
+#  namespace: kube-system
+#data:
+#  admin-password: cHJvbS1vcGVyYXRvcg==
+#  admin-user: YWRtaW4=
+#  ldap-toml: ""
