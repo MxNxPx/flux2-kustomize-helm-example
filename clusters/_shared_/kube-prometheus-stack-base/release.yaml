@@ -46,7 +46,7 @@ spec:
           enabled: true
           org_role: Viewer
       admin:
-        existingSecret: kube-prometheus-stack-grafana
+        existingSecret: kube-prometheus-stack-grafana-custom
         userKey: admin-user
         passwordKey: admin-password
       #adminPassword: prom-operator

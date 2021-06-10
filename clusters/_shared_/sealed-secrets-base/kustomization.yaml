@@ -11,7 +11,7 @@ generatorOptions:
   disableNameSuffixHash: true
 
 secretGenerator:
-- name: kube-prometheus-stack-grafana
+- name: kube-prometheus-stack-grafana-custom
   literals:
   - admin-user=admin
   - admin-password=mptest
