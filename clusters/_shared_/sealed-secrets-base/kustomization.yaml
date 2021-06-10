@@ -4,14 +4,14 @@ namespace: kube-system
 resources:
   - release.yaml
 
-generatorOptions:
-  # disableNameSuffixHash is true disables the default behavior of adding a
-  # suffix to the names of generated resources that is a hash of
-  # the resource contents.
-  disableNameSuffixHash: true
-
-secretGenerator:
-- name: kube-prometheus-stack-grafana
-  literals:
-  - username=admin
-  - password=MxNxPx
+#generatorOptions:
+#  # disableNameSuffixHash is true disables the default behavior of adding a
+#  # suffix to the names of generated resources that is a hash of
+#  # the resource contents.
+#  disableNameSuffixHash: true
+#
+#secretGenerator:
+#- name: kube-prometheus-stack-grafana
+#  literals:
+#  - username=admin
+#  - password=MxNxPx
