@@ -16,8 +16,8 @@ generatorOptions:
   disableNameSuffixHash: true
 
 secretGenerator:
-- name: app-tls
+- name: mycustomkeys
   files:
-    - mytls.cert
+    - mytls.crt
     - mytls.key
   type: "kubernetes.io/tls"
