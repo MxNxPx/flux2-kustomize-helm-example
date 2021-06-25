@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - release.yaml
+  - grafana-sealed-secret.yaml
 
 generatorOptions:
   # labels to add to all generated resources
@@ -34,8 +35,8 @@ secretGenerator:
 - name: additional-scrape-configs
   files:
   - prometheus-additionalScrapeConfig.yaml
-- name: kube-prometheus-stack-grafana-custom
-  literals:
-  - admin-user=admin
-  - admin-password=mptest
-  - ldap-toml=""
+#- name: kube-prometheus-stack-grafana-custom
+#  literals:
+#  - admin-user=admin
+#  - admin-password=mptest
+#  - ldap-toml=""
