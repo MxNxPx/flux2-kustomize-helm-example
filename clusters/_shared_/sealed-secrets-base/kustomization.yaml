@@ -18,6 +18,6 @@ generatorOptions:
 secretGenerator:
 - name: mycustomkeys
   files:
-    - mytls.crt
-    - mytls.key
+    - tls.crt
+    - tls.key
   type: "kubernetes.io/tls"
