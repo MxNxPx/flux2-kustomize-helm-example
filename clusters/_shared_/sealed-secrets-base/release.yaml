@@ -28,10 +28,10 @@ spec:
     # secretName: The name of the TLS secret containing the key used to encrypt secrets
     secretName: "mycustomkeys"
     #secretName: "sealed-secrets-key"
-    dashboards:
-      # If enabled, sealed-secrets will create a configmap with a dashboard in json that's going to be picked up by grafana
-      # See https://github.com/helm/charts/tree/master/stable/grafana#configuration - `sidecar.dashboards.enabled`
-      create: true
-      # Extra labels to apply to the dashboard configmaps
-      labels:
-        grafana_dashboard: "1"
+#    dashboards:
+#      # If enabled, sealed-secrets will create a configmap with a dashboard in json that's going to be picked up by grafana
+#      # See https://github.com/helm/charts/tree/master/stable/grafana#configuration - `sidecar.dashboards.enabled`
+#      create: true
+#      # Extra labels to apply to the dashboard configmaps
+#      labels:
+#        grafana_dashboard: "1"
