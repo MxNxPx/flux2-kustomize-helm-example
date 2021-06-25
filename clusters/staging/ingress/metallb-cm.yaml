@@ -1,20 +1,20 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: ""
-    meta.helm.sh/release-name: "metallb"
-    meta.helm.sh/release-namespace: "metallb-system"
-  labels:
-    app.kubernetes.io/instance: metallb
-    app.kubernetes.io/name: metallb
-    app.kubernetes.io/managed-by: "Helm"
-  name: metallb-config
-  namespace: metallb-system
-data:
-  config: |
-    address-pools:
-    - addresses:
-      - 172.18.255.200-172.18.255.250
-      name: kind-cluster-pool
-      protocol: layer2
+#apiVersion: v1
+#kind: ConfigMap
+#metadata:
+#  annotations:
+#    kubectl.kubernetes.io/last-applied-configuration: ""
+#    meta.helm.sh/release-name: "metallb"
+#    meta.helm.sh/release-namespace: "metallb-system"
+#  labels:
+#    app.kubernetes.io/instance: metallb
+#    app.kubernetes.io/name: metallb
+#    app.kubernetes.io/managed-by: "Helm"
+#  name: metallb-config
+#  namespace: metallb-system
+#data:
+#  config: |
+#    address-pools:
+#    - addresses:
+#      - 172.18.255.200-172.18.255.250
+#      name: kind-cluster-pool
+#      protocol: layer2

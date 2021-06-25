@@ -1,24 +1,24 @@
-# Copyright (c) 2020 SIGHUP s.r.l All rights reserved.
-# Use of this source code is governed by a BSD-style
-# license that can be found in the LICENSE file.
-
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-    forecastle.stakater.com/expose: "true"
-    forecastle.stakater.com/appName: "Gatekeeper Policy Manager"
-    forecastle.stakater.com/icon: "https://raw.githubusercontent.com/sighupio/gatekeeper-policy-manager/master/app/static/user-tie.svg"
-  name: gatekeeper-policy-manager
-  namespace: gatekeeper-system
-spec:
-  rules:
-  # Set the HOST accordingly
-  - host: gatekeeper.10.195.65.46.nip.io
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: gatekeeper-policy-manager
-          servicePort: http
+## Copyright (c) 2020 SIGHUP s.r.l All rights reserved.
+## Use of this source code is governed by a BSD-style
+## license that can be found in the LICENSE file.
+#
+#apiVersion: networking.k8s.io/v1beta1
+#kind: Ingress
+#metadata:
+#  annotations:
+#    kubernetes.io/ingress.class: "nginx"
+#    forecastle.stakater.com/expose: "true"
+#    forecastle.stakater.com/appName: "Gatekeeper Policy Manager"
+#    forecastle.stakater.com/icon: "https://raw.githubusercontent.com/sighupio/gatekeeper-policy-manager/master/app/static/user-tie.svg"
+#  name: gatekeeper-policy-manager
+#  namespace: gatekeeper-system
+#spec:
+#  rules:
+#  # Set the HOST accordingly
+#  - host: gatekeeper.10.195.65.46.nip.io
+#    http:
+#      paths:
+#      - path: /
+#        backend:
+#          serviceName: gatekeeper-policy-manager
+#          servicePort: http
