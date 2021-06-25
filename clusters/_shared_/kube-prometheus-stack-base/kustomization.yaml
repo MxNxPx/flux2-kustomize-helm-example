@@ -34,3 +34,8 @@ secretGenerator:
 - name: additional-scrape-configs
   files:
   - prometheus-additionalScrapeConfig.yaml
+- name: kube-prometheus-stack-grafana-custom
+  literals:
+  - admin-user=admin
+  - admin-password=mptest
+  - ldap-toml=""
