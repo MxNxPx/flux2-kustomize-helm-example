@@ -28,5 +28,4 @@ spec:
     commandArgs:
       - --key-renew-period=0
     # secretName: The name of the TLS secret containing the key used to encrypt secrets
-#    secretName: "mycustomkeys"
-    
+    secretName: "mycustomkeys"

@@ -15,9 +15,9 @@ generatorOptions:
   # the resource contents.
   disableNameSuffixHash: true
 
-#secretGenerator:
-#- name: mycustomkeys
-#  files:
-#    - tls.crt
-#    - tls.key
-#  type: "kubernetes.io/tls"
+secretGenerator:
+- name: mycustomkeys
+  files:
+    - tls.crt
+    - tls.key
+  type: "kubernetes.io/tls"
