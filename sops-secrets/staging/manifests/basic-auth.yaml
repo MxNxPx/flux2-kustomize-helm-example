@@ -1,9 +1,40 @@
 apiVersion: v1
 data:
-  password: Y2hhbmdlLW1l
-  user: YWRtaW4=
+    password: ENC[AES256_GCM,data:/WRtMRQ0HtilyDi0,iv:UdlsJezukbmHLC5AOnlo2NMkK2FHpFkePqtB8n0kguk=,tag:tT20sg5khKOx2Qwujn4hng==,type:str]
+    user: ENC[AES256_GCM,data:N3IYKo3cJzw=,iv:8yQSnqgn0fOIzNMwgczRWzRjygTw7aTuJ+MwvM6sR08=,tag:9d6Bk9zPHyqpu5oxGyMQMQ==,type:str]
 kind: Secret
 metadata:
-  creationTimestamp: null
-  name: basic-auth
-  namespace: default
+    creationTimestamp: null
+    name: basic-auth
+    namespace: default
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2021-07-26T00:39:40Z"
+    mac: ENC[AES256_GCM,data:DsqBJJbXCaITsW5gEOnXFFloDeyEurFcjnXttmyiLjmTKAdd7h06bvtg3JalpH3brlc34YEiLgDb5JG4x4ia7MihKgWO1+SYQh84ihH6CbepbLWeFR3OF5Atmg5eSMC18yGKGgeKbaGczoAQJModXmOTNfrIJqO6OnkBwOMxv7k=,iv:wFgi8gqfWUilVHK/9+gF2PygRcUkm0eaNTSJgLu4/gg=,tag:K/GE3K7URPbdMQ3w82f5mQ==,type:str]
+    pgp:
+        - created_at: "2021-07-26T00:39:40Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA0h6RICzxlSZAQ//aKxobOADT/1oXqcqPsvex+007J/HwNOzJNjCXOYHhGKf
+            8qltlNAfwaqL8nZdtejZ63Jj0fhBY4JnxTFeMG96QzmOiWZJ2vXoC8sbv4ljPQtD
+            gjn1ssQaVcswYacgBUf5LlxUM27L1oRxb/p/0nOPB88lCBpWq9HLg4vN2CKPhzOs
+            eoVBcCUPSmK1TC2mskIZBibP0Mwr8JvuKyAV0HalF69ZgWyX6Qw+jDfGdSupBqSH
+            VM/sXjFQuh6bH4cKoUlxX8Fwcde5qH7n5zJH+0zjS6Qg9+nLv29mQ1CwHjbFZuCr
+            7Iu5Y59/lqIo4JamajPeYth7LFL/4XlhiqrkwVoT7IHY7kaQNs2gA2O63agcwm3r
+            3mlP50z9gES+r/NYYPGcp3bZAfR2WGydcsE1X0Rw1ypRGHtmvfQisaGOzLH+roav
+            aJ2281SNsPvYZDNIeW8x0gOUZ3HblUqw5A1CE684Flub/YuJU8LaCrKPz9nhDilo
+            YKMi2Pexa3VPNGOJspzvWsBoWQ8nNIUgeYoZRgv+F2EGr0CjdvCo33b8PlApiG9c
+            e91Kw2bwH8QP2A3WuLzX8u/5Am16+TYDVnOVC3v2i7+HAQzNl0mUzue5lXhbGLQ4
+            IjFrnhDUm1zaD6430p21jqgEydOcM6tNs5o1ga4VrjKrgZGgGZfrltKpYscIlRLS
+            XgEeUEM/WsZM5m201tVUzjGnM4X1dWRXXI0v0xEagV4diL5bCR7N74utnOaEAkTj
+            ANHVUo4G1FTfOcwPNMHUH1quv/AstFFPhuh7bD5/tXyH5JHl7LXlPQN/hv9kZ6A=
+            =mPNC
+            -----END PGP MESSAGE-----
+          fp: E60C780414D6837363C95074C7A84018BE05E526
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
