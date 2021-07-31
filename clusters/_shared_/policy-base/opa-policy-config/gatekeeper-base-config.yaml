@@ -1,20 +1,20 @@
-apiVersion: config.gatekeeper.sh/v1alpha1
-kind: Config
-metadata:
-  name: gatekeeper-base-config
-  namespace: "gatekeeper-system"
-spec:
-  match:
-    - excludedNamespaces: 
-       - "kube-system"
-       - "gatekeeper-system"
-       - "flux-system"
-      processes: ["*"]
-    - excludedNamespaces: 
-       - "local-path-storage"
-       - "kube-node-lease"
-       - "kube-public"
-       - "nginx"
-       - "redis"
-       - "podinfo"
-      processes: ["audit", "webhook"]
+#apiVersion: config.gatekeeper.sh/v1alpha1
+#kind: Config
+#metadata:
+#  name: gatekeeper-base-config
+#  namespace: "gatekeeper-system"
+#spec:
+#  match:
+#    - excludedNamespaces: 
+#       - "kube-system"
+#       - "gatekeeper-system"
+#       - "flux-system"
+#      processes: ["*"]
+#    - excludedNamespaces: 
+#       - "local-path-storage"
+#       - "kube-node-lease"
+#       - "kube-public"
+#       - "nginx"
+#       - "redis"
+#       - "podinfo"
+#      processes: ["audit", "webhook"]
