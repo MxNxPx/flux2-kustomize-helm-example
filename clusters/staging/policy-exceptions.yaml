@@ -1,15 +1,15 @@
-#apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-#kind: Kustomization
-#metadata:
-#  name: policy-exceptions
-#  namespace: flux-system
-#spec:
-#  dependsOn:
-#    - name: opa-policy-templates
-#  interval: 5m
-#  path: ./opa-policy-constraints
-#  prune: true
-#  sourceRef:
-#    kind: GitRepository
-#    name: policy-exceptions
-#  validation: none
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: policy-exceptions
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: opa-policy-templates
+  interval: 5m
+  path: ./opa-policy-constraints
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: policy-exceptions
+  validation: none
