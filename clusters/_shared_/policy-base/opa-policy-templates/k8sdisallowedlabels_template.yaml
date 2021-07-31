@@ -10,13 +10,12 @@ spec:
       names:
         kind: K8sDisallowedLabels
       validation:
-        # Schema for the `parameters` field
         openAPIV3Schema:
           type: object
           properties:
             message:
               type: string
-            labels:
+            annotations:
               type: array
               items:
                 type: object
