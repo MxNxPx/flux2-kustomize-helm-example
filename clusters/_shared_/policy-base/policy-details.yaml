@@ -14,7 +14,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  prune: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
@@ -31,4 +30,3 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  prune: true
