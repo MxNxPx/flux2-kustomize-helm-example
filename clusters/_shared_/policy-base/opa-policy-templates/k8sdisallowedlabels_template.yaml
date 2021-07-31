@@ -1,0 +1,38 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8sdisallowedlabels
+  annotations:
+    description: Requires labels to be in an approved list
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sDisallowedLabels
+      validation:
+        # Schema for the `parameters` field
+        openAPIV3Schema:
+          type: object
+          properties:
+            message:
+              type: string
+            labels:
+              type: array
+              items:
+                type: object
+                properties:
+                  key:
+                    type: string
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8sdisallowedlabels
+
+        violation[{"msg": msg}] {
+          denylist := input.parameters.labels[_]
+          value := input.request.object.metadata.labels[key]
+          denylist.key == key
+
+          def_msg := sprintf("Label <%v> is not allowed", [key])
+          msg := get_message(input.parameters, def_msg)
+        }
