@@ -27,6 +27,14 @@ spec:
       rego: |
         package k8sdisallowedlabels
 
+        get_message(parameters, _default) = msg {
+          not parameters.message
+          msg := _default
+        }
+        get_message(parameters, _default) = msg {
+          msg := parameters.message
+        }
+
         violation[{"msg": msg}] {
           denylist := input.parameters.labels[_]
           value := input.request.object.metadata.labels[key]
