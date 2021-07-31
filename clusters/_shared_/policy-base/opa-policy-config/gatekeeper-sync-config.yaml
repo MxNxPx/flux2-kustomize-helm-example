@@ -15,5 +15,6 @@ spec:
       - group: "networking.k8s.io"
         version: "v1"
         kind: "Ingress"
-      - version: "v1"
-        kind: "Namespaces"
+      - group: ""
+        version: "v1"
+        kind: "Namespace"
