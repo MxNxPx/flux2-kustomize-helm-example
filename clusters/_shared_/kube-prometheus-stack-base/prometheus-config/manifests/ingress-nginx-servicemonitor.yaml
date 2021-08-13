@@ -1,13 +1,15 @@
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: ingress-nginx
-  namespace: ingress-nginx
-spec:
-  endpoints:
-  - port: metrics
-#  jobLabel: jobLabel
-  selector:
-    matchLabels:
-      app.kubernetes.io/name: ingress-nginx
-
+#apiVersion: monitoring.coreos.com/v1
+#kind: ServiceMonitor
+#metadata:
+#  name: ingress-nginx-too
+#  namespace: ingress-nginx-too
+#spec:
+#  endpoints:
+#  - port: metrics
+##  jobLabel: jobLabel
+#  namespaceSelector:
+#    matchNames:
+#    - ingress-nginx-too
+#  selector:
+#    matchLabels:
+#      app.kubernetes.io/name: ingress-nginx
