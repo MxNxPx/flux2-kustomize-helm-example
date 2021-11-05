@@ -13,6 +13,7 @@ spec:
       validation:
         # Schema for the `parameters` field
         openAPIV3Schema:
+          type: array
           properties:
             tags:
               type: array
