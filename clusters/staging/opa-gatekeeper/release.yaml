@@ -14,45 +14,25 @@ spec:
       version: "3.6.0"
   interval: 0h5m0s
   install:
+    replace: true
     remediation:
       retries: 3
-  # Default values
+    crds: CreateReplace
+  upgrade:
+    remediation:
+      retries: 3
+    crds: CreateReplace
+    cleanupOnFail: true
   values:
     postInstall:
       labelNamespace:
-        enabled: false
-    podAnnotations:
-      prometheus.io/port: "8888"
-      prometheus.io/scrape: "true"
-  postRenderers: 
-  - kustomize:
-      patchesStrategicMerge:
-      - apiVersion: apps/v1
-        kind: Deployment
-        metadata:
-          name: gatekeeper-controller-manager
-          namespace: gatekeeper-system
-        spec:
-          template:
-            spec:
-              containers:
-              - name: manager
-                args:
-                - --port=8443
-                - --logtostderr
-                - --operation=webhook
-                - --exempt-namespace=gatekeeper-system
-                - --exempt-namespace=flux-system
-                - --exempt-namespace=kube-system
-                - --exempt-namespace=kube-node-lease
-                - --exempt-namespace=kube-public
-                - --exempt-namespace=podinfo
-                - --exempt-namespace=redis
-                #- --exempt-namespace=default
-                - --exempt-namespace=nginx
-                - --exempt-namespace=staging-test
-                - --exempt-namespace=local-path-storage
-                - --exempt-namespace=ingress-nginx
-                - --exempt-namespace=ingress-nginx-too
-                - --exempt-namespace=metallb-system
-                #- --exempt-namespace=kubecost
+        enabled: true
+      controllerManager:
+        exemptNamespaces:
+          - flux-system
+          - kube-system
+          - kube-node-lease
+          - kube-public
+          - default
+          - nginx
+          - local-storage-path
