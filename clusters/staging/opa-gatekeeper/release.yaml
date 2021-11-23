@@ -27,8 +27,8 @@ spec:
     postInstall:
       labelNamespace:
         enabled: false
-      controllerManager:
-        exemptNamespaces:
+    controllerManager:
+      exemptNamespaces:
         - flux-system
         - kube-system
         - kube-node-lease
