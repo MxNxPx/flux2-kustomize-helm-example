@@ -26,13 +26,13 @@ spec:
   values:
     postInstall:
       labelNamespace:
-        enabled: true
+        enabled: false
       controllerManager:
         exemptNamespaces:
-          - flux-system
-          - kube-system
-          - kube-node-lease
-          - kube-public
-          - default
-          - nginx
-          - local-storage-path
+        - flux-system
+        - kube-system
+        - kube-node-lease
+        - kube-public
+        - default
+        - nginx
+        - local-storage-path
