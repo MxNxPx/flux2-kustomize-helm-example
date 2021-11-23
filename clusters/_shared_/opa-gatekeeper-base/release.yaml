@@ -26,32 +26,13 @@ spec:
   values:
     postInstall:
       labelNamespace:
-        enabled: false
-  postRenderers: 
-  - kustomize:
-      patchesStrategicMerge:
-      - apiVersion: apps/v1
-        kind: Deployment
-        metadata:
-          name: gatekeeper-controller-manager
-          namespace: gatekeeper-system
-        spec:
-          template:
-            spec:
-              containers:
-              - name: manager
-                args:
-                - --port=8443
-                - --logtostderr
-                - --operation=webhook
-                - --exempt-namespace=gatekeeper-system
-                - --exempt-namespace=flux-system
-                - --exempt-namespace=kube-system
-                - --exempt-namespace=kube-node-lease
-                - --exempt-namespace=kube-public
-                - --exempt-namespace=podinfo
-                - --exempt-namespace=redis
-                - --exempt-namespace=default
-                - --exempt-namespace=nginx
-                - --exempt-namespace=local-path-storage
-                - --exempt-namespace=metallb-system
+        enabled: true
+      controllerManager:
+        exemptNamespaces:
+          - flux-system
+          - kube-system
+          - kube-node-lease
+          - kube-public
+          - default
+          - nginx
+          - local-storage-path
