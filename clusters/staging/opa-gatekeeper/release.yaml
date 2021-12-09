@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: gatekeeper
         namespace: flux-system
-      version: "3.6.0"
+      version: "3.7.0"
   interval: 0h5m0s
   install:
     replace: true
