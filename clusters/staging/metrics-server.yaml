@@ -15,4 +15,4 @@ spec:
   prune: true
   postBuild:
     substitute:
-      metrics_server_address_types: "Hostname"
+      #metrics_server_address_types: "Hostname"
