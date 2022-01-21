@@ -19,6 +19,6 @@ spec:
   values:
     extraArgs:
       kubelet-insecure-tls: true
-      kubelet-preferred-address-types: InternalIP
+      kubelet-preferred-address-types: ${metrics_server_address_types:=InternalIP}
     apiService:
       create: true
