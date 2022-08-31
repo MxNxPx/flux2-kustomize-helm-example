@@ -41,6 +41,7 @@
       {
         "datasources": ["helm"],
         "commitMessageTopic": "Helm chart {{depName}}",
+        "matchBaseBranches": ["/^release\\/.*/"],
         "separateMinorPatch": true
       },
       {
@@ -48,6 +49,7 @@
         "commitMessageTopic": "Docker image {{depName}}",
         "commitMessageExtra": "to {{#if isSingleVersion}}v{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}",
         "enabled": true,
+        "matchBaseBranches": ["/^release\\/.*/"],
         "separateMinorPatch": true
       },
       // Add labels according to package and update types
