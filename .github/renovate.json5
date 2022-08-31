@@ -1,5 +1,6 @@
 {
     "enabled": true,
+    "timezone": "America/New_York",
     "dependencyDashboard": true,
     "commitMessageSuffix": "[ci-skip]",
     "platform": "github",

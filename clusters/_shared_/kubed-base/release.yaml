@@ -6,6 +6,7 @@ spec:
   releaseName: kubed
   chart:
     spec:
+      # renovate: registryUrl=https://charts.appscode.com/stable/
       chart: kubed
       sourceRef:
         kind: HelmRepository
