@@ -80,24 +80,6 @@
         "datasources": ["helm"],
         "updateTypes": ["patch"],
         "labels": ["renovate/helm-release", "dependency/patch"]
-      },
-      // auto-updates
-      {
-        "datasources": ["docker"],
-        "automerge": true,
-        "requiredStatusChecks": null,
-        "schedule": "after 1am and before 5am",
-        "updateTypes": ["minor", "patch"],
-        excludePackageNames: []
-      },
-
-      {
-        "datasources": ["helm"],
-        "automerge": true,
-        "requiredStatusChecks": null,
-        "schedule": "after 1am and before 5am",
-        "updateTypes": ["minor", "patch"],
-        excludePackageNames: []
       }
     ]
   }
