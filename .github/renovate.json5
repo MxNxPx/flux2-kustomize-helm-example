@@ -10,7 +10,7 @@
     ":automergeBranchPush"
   ],
   "platform": "github",
-  "repositories": ["8451LLC/aks-gitops"],
+  "repositories": ["MxNxPx/flux2-kustomize-helm-example"],
   "onboarding": false,
   "requireConfig": false,
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
