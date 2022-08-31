@@ -4,7 +4,6 @@
     "dependencyDashboard": true,
     "commitMessageSuffix": "[ci-skip]",
     "platform": "github",
-    "repositories": ["MxNxPx/flux2-kustomize-helm-example"],
     "onboarding": false,
     "requireConfig": false,
     "dependencyDashboardTitle": "Renovate Dashboard 🤖",
