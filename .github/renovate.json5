@@ -41,12 +41,14 @@
       {
         "datasources": ["helm"],
         "commitMessageTopic": "Helm chart {{depName}}",
+        "matchBaseBranches": ["/^release\\/.*/"],
         "separateMinorPatch": true
       },
       {
         "datasources": ["docker"],
         "commitMessageTopic": "Docker image {{depName}}",
         "commitMessageExtra": "to {{#if isSingleVersion}}v{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}",
+        "matchBaseBranches": ["/^release\\/.*/"],
         "enabled": true,
         "separateMinorPatch": true
       },
